@@ -110,3 +110,29 @@ p {
     opacity: 1;
   }
 }
+
+@media (hover: none) {
+  .bayan-item * {
+    cursor: auto;
+  }
+
+  .bayan * {
+    color: black;
+  }
+  
+  .bayan .bayan-item-icon {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  html {
+    font-size: 45%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  html {
+    font-size: 30%;
+  }
+}
