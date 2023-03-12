@@ -1,3 +1,7 @@
+:root {
+  --main-color: lightgrey;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -11,9 +15,42 @@ h1 {
   font-size: 3rem;
 }
 
+p {
+  margin: 0;
+}
+
 .wrapper {
   margin: 2rem auto;
   max-width: 60rem;
+}
+
+.bayan:hover * {
+  color: black;
+}
+
+.bayan:hover .bayan-item-icon {
+  display: block;
+}
+
+.bayan-item-title {
+  display: flex;
+  justify-content: space-between;
+  
+  padding: 0.5rem 0;
+  max-width: 60rem;
+  height: 4rem;
+
+  font-size: 2rem;
+  font-weight: bold;
+  color: #0059D9;
+
+  border-top: 0.1rem solid var(--main-color);
+}
+
+.bayan-item-icon {
+  width: 3rem;
+  height: 3rem;
+  display: none;
 }
 
 .bayan-item:hover * {
@@ -22,4 +59,28 @@ h1 {
 
 .bayan-item-input {
   appearance: none;
+}
+
+.bayan-content {
+  max-width: 60rem;
+  padding: 0 0 0.5rem 0;
+  display: none;
+}
+
+.bayan-content img {
+  display: block;
+  margin: 0 auto;
+  max-width: 40rem;
+}
+
+.bayan-item-input:checked + .bayan-item-label > .bayan-item-title {
+  color: black;
+}
+
+.bayan-item-input:checked + .bayan-item-label > .bayan-content {
+  display: block;
+}
+
+.bayan-item:hover .bayan-item-label > .bayan-content {
+  display: block;
 }
