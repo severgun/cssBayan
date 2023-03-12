@@ -1,5 +1,6 @@
 :root {
   --main-color: lightgrey;
+  --anim-duration: 500ms;
 }
 
 * {
@@ -71,16 +72,41 @@ p {
   display: block;
   margin: 0 auto;
   max-width: 40rem;
+
+  animation-duration: var(--anim-duration);
+  animation-name: zoomIn;
 }
 
 .bayan-item-input:checked + .bayan-item-label > .bayan-item-title {
   color: black;
 }
 
+.bayan-item-input:checked + .bayan-item-label > .bayan-item-title >.bayan-item-icon {
+  transform: rotate(45deg);
+  transition: var(--anim-duration);
+}
+
 .bayan-item-input:checked + .bayan-item-label > .bayan-content {
   display: block;
 }
 
+.bayan-item:hover .bayan-item-icon {
+  transform: rotate(45deg);
+  transition: var(--anim-duration);
+}
+
 .bayan-item:hover .bayan-item-label > .bayan-content {
   display: block;
+}
+
+@keyframes zoomIn {
+  from {
+    width: 10rem;
+    opacity: 0.1;
+  }
+
+  to {
+    width: 40rem;
+    opacity: 1;
+  }
 }
