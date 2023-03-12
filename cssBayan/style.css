@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+.wrapper {
+  margin: 2rem auto;
+  max-width: 60rem;
+}
+
+.bayan-item:hover * {
+  cursor: pointer;
+}
+
+.bayan-item-input {
+  appearance: none;
+}
